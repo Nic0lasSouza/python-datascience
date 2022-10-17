@@ -27,6 +27,12 @@ from __future__ import division
 num_users = len(users)
 avg_conections = total_conections / num_users
 num_friends_by_id = [(user["id"], number__of__friends(user)) for user in users]
-sorted(num_friends_by_id,
-    key=lambda(user_id, num_friends):num_friends,
-    reverse=True)
+#sorted(num_friends_by_id, key=lambda (user_id, num_friends): num_friends, reverse=True)
+def friends_of_friend_ids_bad(user):
+    #"foaf" #friend of a friend
+    return [foaf["id"]
+        for friend in user["friends"]
+        for foaf in friend["friends"]]
+print([friend["id"] for friend in users[0]["friends"]])
+print([friend["id"] for friend in users[1]["friends"]])
+print([friend["id"] for friend in users[2]["friends"]])
