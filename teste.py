@@ -7,7 +7,7 @@ tamanho = input("Qual o tamanho de roupa desejado?")
 if peças == "calça":
     print("A calça custa $29,90")
     qtd = int(input("Quantas você deseja?"))
-    calça = 29,90
+    calça = 29.90
     calculo = calça*qtd
     print(f"{calculo}")
     formapgt = input("Será em dinheiro ou cartão?")
