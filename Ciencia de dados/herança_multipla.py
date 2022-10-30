@@ -17,7 +17,7 @@ class Ave(Animal):
         super().__init__(**kw)
 
     def __str__(self):
-        return "Ave 42"
+        return "Ave"
 
 class Cachorro(Mamifero):
     pass
@@ -32,8 +32,12 @@ class Gato(Mamifero):
 class Ornintorrinco(Mamifero, Ave):
     def __init__(self, cor_bico, cor_pelo, numero_patas):
         print(Ornintorrinco.__mro__)
+        print(Ornintorrinco.mro())
         super().__init__(cor_pelo=cor_pelo, cor_bico=cor_bico, numero_patas=numero_patas)
 
+
+    def __str__(self):
+        return 'Ornitorrinco'
 gato = Gato(numero_patas = 4, cor_pelo = "preto")
 print(gato)
 
