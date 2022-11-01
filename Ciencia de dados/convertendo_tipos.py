@@ -1,6 +1,3 @@
-from ast import Str
-
-
 print(int(1.211631616))
 print(int("10"))
 print(float("10.10"))
